@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: fraud-detection
+    runtime: docker
+    env: python
+    build:
+      dockerfile: Dockerfile
+    envVars:
+      - key: API_RATE_LIMIT
+        value: 10/minute
